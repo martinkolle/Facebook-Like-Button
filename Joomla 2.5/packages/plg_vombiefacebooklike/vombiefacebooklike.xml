@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.7" method="upgrade" type="plugin" group="system">
+	<name>System - Facebook Like</name>
+	<author>Martin Kollerup</author>
+	<creationDate>January 2012</creationDate>
+	<copyright>Copyright (C) 2011 Martiinkolle.dk. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>martiinkolle@gmail.com</authorEmail>
+	<authorUrl>martiinkolle.dk</authorUrl>
+	<version>1.0</version>
+	<description>Open Graph support for mod_facebooklike</description>
+	<files>
+		<filename plugin="vombiefacebooklike">vombiefacebooklike.php</filename>
+	</files>
+	<config>
+	</config>
+</extension>
