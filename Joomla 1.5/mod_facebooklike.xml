@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="module" method="upgrade">
+	<name>Facebook Like</name>
+	<author>Martiinkolle.dk</author>
+	<creationDate>February 2011</creationDate>
+	<copyright>Copyright (C) 2011 Martiinkolle.dk and KMweb.dk. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>martiinkolle@gmail.com</authorEmail>
+	<authorUrl>http://martiinkolle.dk</authorUrl>
+	<version>1.4.1</version>
+	<description>
+<![CDATA[
+<style type="text/css">
+#facebooklike ol li, #facebooklike p{font-size:14px}
+</style>
+
+<div style="width:100%" id="facebooklike"> 
+	<div style="width:45%; float:left;">
+	<h1 style="color:#136AA5;font-size:25px;">Thanks for installing Facebook Like!</h1>
+	<p>Some new features have been added in 1.4.x</p>
+	<ol>
+		<li>(<b>1.4.1</b>) Added CSS field</li>
+		<li>Supporting SEF urls</li>
+		<li>Several bugfixes from 1.3.1 (Like style)</li>
+		<li>Added design - overrride Joomla standard (backend)</li>
+		<li>HTML 5 support</li>
+		<li>Re-design URL function</li>
+		<li>Re-design view function (html5/iframe/fb:like)</li>
+	</ol>
+	<br />
+	Cheers, <a href="http://martiinkolle.dk" target="_blank">Martiinkolle.dk</a>
+</div>
+<div style="width:35%; float:left;margin-top:50px;">
+<a style="margin-top:150px;border: 1px solid #3B6F1B;border-radius: 5px 5px 5px 5px;font-size: 30px;margin-top: 35px;padding: 10px;text-decoration: none;width: 60%;background:#00922D;background: -webkit-gradient(linear, 50% 100%, 50% 0%, from(#00922D), to(#00900D));background: -moz-linear-gradient(90deg, #00922D, #00900D);filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#CCCCCC', endColorstr='#F1F1F1');color:#cccccc !important;" href="index.php?option=com_modules&filter_type=mod_facebooklike">Go to module</a>
+
+<a style="margin-top:180px;border-radius: 5px 5px 5px 5px;font-size: 30px;margin-top: 35px;padding: 10px;text-decoration: none;width: 60%;background: #CCC;
+background: -webkit-gradient(linear, 50% 100%, 50% 0%, from(#CCC), to(#F1F1F1));
+background: -moz-linear-gradient(90deg, #CCC, #F1F1F1);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#CCCCCC', endColorstr='#F1F1F1');
+color: #00922D !important;" href="http://extensions.joomla.org/extensions/social-web/republish/16585" target="_blank">Vote at JED</a>
+
+</div>
+</div>
+]]>
+	</description>
+		
+	<files>
+        <filename module="mod_facebooklike">mod_facebooklike.php</filename>
+        <filename>mod_facebooklike.xml</filename>
+        <filename>index.html</filename>
+        <folder>fields</folder>
+
+        <folder>tmpl</folder>
+        <folder>language</folder>
+    </files>
+
+    <languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_facebooklike.ini</language>
+		<language tag="da-DK">da-DK/da-DK.mod_facebooklike.ini</language>
+	</languages>
+	
+		<params addpath="/modules/mod_facebooklike/fields">
+			<param type="validation"/>
+
+			<param type="spacer" default="MOD_FACEBOOKLIKE_GENERAL_SETTINGS"/>
+			<param type="radio" name="autoDetectUrl" label="MOD_FACEBOOKLIKE_AUTODETECTURL" description="MOD_FACEBOOKLIKE_AUTODETECTURL" default="3" class="autodetect">
+				<option onclick="get_radio_value()" value="1">MOD_FACEBOOKLIKE_SITE_URL</option>
+				<option onclick="get_radio_value()" value="2">MOD_FACEBOOKLIKE_INVIDUELLY_PAGE</option>
+				<option onclick="get_radio_value()" value="3">MOD_FACEBOOKLIKE_OWN_URL</option>
+			</param>
+			<param name="url" type="text" label="MOD_FACEBOOKLIKE_FACEBOOK_URL_IF" description="MOD_FACEBOOKLIKE_DESC_FACEBOOK_URL" default="" size="50"/>		
+			<param name="width" type="text" label="MOD_FACEBOOKLIKE_WIDTH" description="MOD_FACEBOOKLIKE_DESC_WIDTH" default="100%" size="50"/>
+			<param name="height" type="text" label="MOD_FACEBOOKLIKE_HEIGHT" description="MOD_FACEBOOKLIKE_DESC_HEIGHT" default="" size="50"/>		
+
+			<param name="action" type="list" default="1" label="MOD_FACEBOOKLIKE_VERB_LIKE"	description="MOD_FACEBOOKLIKE_DESC_VERB_LIKE">
+				<option value="like">MOD_FACEBOOKLIKE_LIKE</option>
+				<option value="recommend">MOD_FACEBOOKLIKE_RECOMMEND</option>
+			</param>
+
+			<param name="showPictures" type="list" default="1" label="MOD_FACEBOOKLIKE_SHOW_PICTURES" description="MOD_FACEBOOKLIKE_DESC_SHOW_PICTURES">
+				<option value="1">MOD_FACEBOOKLIKE_YES</option>
+				<option value="0">MOD_FACEBOOKLIKE_NO</option>
+			</param>
+
+			<param name="layout" type="list" default="standard" label="MOD_FACEBOOKLIKE_LAYOUT_STYLE" description="MOD_FACEBOOKLIKE_DESC_LAYOUT_STYLE">
+				<option value="standard">Standard</option>
+				<option value="box_count">Box_count</option>
+				<option value="button_count">Button_count</option>
+			</param>
+		</params>
+
+		<params group="advanced">
+			<param type="spacer" default="MOD_FACEBOOKLIKE_DESIGN_SETTINGS"/>
+
+			<param name="colorScheme" type="list"	default="0" label="MOD_FACEBOOKLIKE_COLOR_SCHEME" description="MOD_FACEBOOKLIKE_DESC_COLOR_SCHEME">
+				<option value="light">MOD_FACEBOOKLIKE_LIGHT</option>
+				<option value="dark">MOD_FACEBOOKLIKE_DARK</option>
+			</param>
+
+			<param name="font" type="list" default="arial" label="MOD_FACEBOOKLIKE_FONT" description="">
+				<option value="arial">arial</option>
+				<option value="lucida+grande">lucida grande</option>
+				<option value="segoe+ui">segoe ui</option>
+				<option value="tahoma">tahoma</option>
+				<option value="trebuchet+ms">trebuchet ms</option>
+				<option value="verdana">verdana</option>
+			</param>
+
+			<param name="specifict_css" type="textarea" default="" label="MOD_FACEBOOKLIKE_CSS" description="MOD_FACEBOOKLIKE_CSS_DESC" />
+
+			<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+
+			<param type="spacer" default="MOD_FACEBOOKLIKE_ADVANCED_SETTINGS"/>
+
+			<param name="loadApi" type="list" default="1" label="MOD_FACEBOOKLIKE_LOAD_XFBML" description="MOD_FACEBOOKLIKE_LOAD_XFBML_DESC">
+				<option value="1">MOD_FACEBOOKLIKE_YES</option>
+				<option value="0">MOD_FACEBOOKLIKE_NO</option>
+			</param>
+
+			<param name="loadAsWhat" type="list" default="3" label="MOD_FACEBOOKLIKE_FACELIKE_LOAD_AS" description="MOD_FACEBOOKLIKE_FACELIKE_DESC_LOAD_AS">
+				<option value="1">MOD_FACEBOOKLIKE_IFRAME</option>
+				<option value="2">MOD_FACEBOOKLIKE_HTML_5</option>
+				<option value="3">MOD_FACEBOOKLIKE_XFBML</option>
+			</param>
+			<param name="send" type="list" default="1" label="MOD_FACEBOOKLIKE_INCLUDE_SEND" description="MOD_FACEBOOKLIKE_INCLUDE_SEND_DESC">
+				<option value="true">MOD_FACEBOOKLIKE_YES</option>
+				<option value="false">MOD_FACEBOOKLIKE_NO</option>
+			</param>
+				
+			<param name="httpsOrNot" type="list" default="1" label="MOD_FACEBOOKLIKE_HTTPS_OR_NOT" description="MOD_FACEBOOKLIKE_DESC_HTTPS_OR_NOT">
+				<option value="1">Http</option>
+				<option value="0">Https</option>
+			</param>
+			<param name="copyright" type="list" default="1" label="MOD_FACEBOOKLIKE_COPYRIGHT" description="MOD_FACEBOOKLIKE_COPYRIGHT_DESC">
+				<option value="1">MOD_FACEBOOKLIKE_YES</option>
+				<option value="0">MOD_FACEBOOKLIKE_NO</option>
+			</param>				
+
+		</params>
+</install>
