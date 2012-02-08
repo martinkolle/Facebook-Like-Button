@@ -5,7 +5,7 @@
  * @version 1.4
  * @subpackage mod_facebooklike
  * @copyright (C) 2011 KMweb.dk and Martiinkolle.dk
- * @license http://www.gnu.org/copyleft/gpl.html GNU/GPL v.2 - please keep my link!
+ * @license http://www.gnu.org/copyleft/gpl.html GNU/GPL v.2
  * @link http://martiinkolle.dk
  **/
 
@@ -46,11 +46,11 @@ $action  	  = $params->get("action","like");
 $suffix  	  = $params->get("moduleclass_sfx","");
 $loadAsWhat	  = $params->get("loadAsWhat","3");
 $sendButton	  = $params->get("send","0");
+$sendButton   = ($sendButton == '1') ? 'true' : 'false';
 $font		  = $params->get("font","arial");
 $loadApi	  = $params->get("loadApi","1");
 $copyright	  = $params->get("copyright","1");
 $css 		  = $params->get("specifict_css","");
-$sendButton   = ($sendButton == '1') ? 'true' : 'false';
 
 //Set this to 1 if you want to remove my name from the source code!
 $removeCopyright = $params->get("removeCopyright","0");

@@ -5,7 +5,7 @@
  * @version 1.4.1
  * @subpackage mod_facebooklike
  * @copyright (C) 2011 KMweb.dk and Martiinkolle.dk
- * @license http://www.gnu.org/copyleft/gpl.html GNU/GPL v.2 - please keep my link!
+ * @license http://www.gnu.org/copyleft/gpl.html GNU/GPL v.2
  * @link http://martiinkolle.dk
  **/
  

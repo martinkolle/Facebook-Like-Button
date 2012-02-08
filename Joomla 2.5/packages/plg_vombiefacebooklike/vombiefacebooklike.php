@@ -15,8 +15,8 @@ defined( '_JEXEC' ) or die;
 class plgSystemVombieFacebookLike extends JPlugin
 {	
 
-	/*
-	* @Used to add xmlns:og and xmlns:fb to the html tag, so Open Graph will work problerly. 
+	/**
+	* Will add ogp and xmlns to the <html> to get Open Graph to work. 
 	*/
 
 	public function onAfterRender()
@@ -42,7 +42,7 @@ class plgSystemVombieFacebookLike extends JPlugin
 				$buffer = JResponse::getBody();
 				$buffer = str_replace ("<html", '<html xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml" ', $buffer);
 				JResponse::setBody($buffer);
-				return true;
+			return true;
 		}
 	}
 }

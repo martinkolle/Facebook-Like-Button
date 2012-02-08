@@ -123,8 +123,8 @@ color: #00922D !important;" href="http://extensions.joomla.org/extensions/social
 				<option value="3">MOD_FACEBOOKLIKE_XFBML</option>
 			</param>
 			<param name="send" type="list" default="1" label="MOD_FACEBOOKLIKE_INCLUDE_SEND" description="MOD_FACEBOOKLIKE_INCLUDE_SEND_DESC">
-				<option value="true">MOD_FACEBOOKLIKE_YES</option>
-				<option value="false">MOD_FACEBOOKLIKE_NO</option>
+				<option value="1">MOD_FACEBOOKLIKE_YES</option>
+				<option value="0">MOD_FACEBOOKLIKE_NO</option>
 			</param>
 				
 			<param name="httpsOrNot" type="list" default="1" label="MOD_FACEBOOKLIKE_HTTPS_OR_NOT" description="MOD_FACEBOOKLIKE_DESC_HTTPS_OR_NOT">

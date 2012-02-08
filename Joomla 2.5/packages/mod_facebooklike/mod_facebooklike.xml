@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension version="1.7.0" type="module" method="upgrade">
+<extension version="2.5.0" type="module" method="upgrade">
 	<name>MOD_FACEBOOKLIKE</name>
 	<author>Martiinkolle.dk</author>
 	<creationDate>February 2011</creationDate>
@@ -60,8 +60,8 @@ Facebook like button for Joomla 1.7/2.5 by Martiinkolle.dk
 				<option value="0">MOD_FACEBOOKLIKE_NO</option>
 			</field>
 			<field name="send" type="list" default="1" label="MOD_FACEBOOKLIKE_INCLUDE_SEND" description="MOD_FACEBOOKLIKE_INCLUDE_SEND_DESC">
-				<option value="true">MOD_FACEBOOKLIKE_YES</option>
-				<option value="false">MOD_FACEBOOKLIKE_NO</option>
+				<option value="1">MOD_FACEBOOKLIKE_YES</option>
+				<option value="0">MOD_FACEBOOKLIKE_NO</option>
 			</field>
 		</fieldset>
 
@@ -115,6 +115,8 @@ Facebook like button for Joomla 1.7/2.5 by Martiinkolle.dk
 			</field>				
 		</fieldset>
 		<fieldset name="opengraph" label="MOD_FACEBOOKLIKE_OPEN_GRAPH" description="MOD_FACEBOOKLIKE_OPENGRAPH" class="opengraph">
+
+			<field type="opengraph" />
 			
 			<field name="title" type="text" label="MOD_FACEBOOKLIKE_OG_TITLE" description="MOD_FACEBOOKLIKE_OG_TITLE_DESC" />
 
