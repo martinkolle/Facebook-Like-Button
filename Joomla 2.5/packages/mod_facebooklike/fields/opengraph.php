@@ -21,6 +21,8 @@ class JFormFieldopengraph extends JFormField
 		$enabled = JPluginHelper::isEnabled('system', 'vombiefacebooklike');
 		if(!$enabled):
 			return '<a style="color:red;font-size:14px;font-weight:bold;" href="index.php?option=com_plugins&view=plugins&filter_search=facebook%20like">'.JText::_('MOD_FACEBOOKLIKE_ENABLE_PLUGIN').'</a>';
+		else:
+			return '<a style="color:green;font-size:14px;font-weight:bold;" href="index.php?option=com_plugins&view=plugins&filter_search=facebook%20like">'.JText::_('MOD_FACEBOOKLIKE_ENABLED').'</a>';
 		endif;
 	}
 }
