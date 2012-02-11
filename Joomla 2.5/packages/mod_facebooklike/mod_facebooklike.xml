@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension version="2.5.0" type="module" method="upgrade">
+<extension version="1.7.0" type="module" method="upgrade">
 	<name>MOD_FACEBOOKLIKE</name>
 	<author>Martiinkolle.dk</author>
 	<creationDate>February 2011</creationDate>
-	<copyright>Copyright (C) 2011 Martiinkolle.dk and KMweb.dk. All rights reserved.</copyright>
+	<copyright>Copyright (C) 2012 Martiinkolle.dk and KMweb.dk. All rights reserved.</copyright>
 	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
 	<authorEmail>martiinkolle@gmail.com</authorEmail>
 	<authorUrl>http://martiinkolle.dk</authorUrl>
-	<version>1.4.1</version>
+	<version>1.4.2</version>
 	<description>
 <![CDATA[
 Facebook like button for Joomla 1.7/2.5 by Martiinkolle.dk

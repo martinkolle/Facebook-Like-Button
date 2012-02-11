@@ -1,7 +1,7 @@
 <?php
 /**
  * Facebook Like Button for Joomla
- * @package Joomla 1.6 | Joomla 1.7 | Joomla 2.5
+ * @package Joomla 2.5
  * @version 1.4
  * @subpackage mod_facebooklike
  * @copyright (C) 2011 KMweb.dk and Martiinkolle.dk
@@ -23,17 +23,16 @@ $http 		  = ($httpsOrNot == '1') ? 'http://':'https://';
 
 switch($autoDetectUrl){
 	case "1" : //Site Url
-	$url = JURI::base();
+		$url = JURI::base();
 	break;
 	case "2": //Page Url
-	$url = JURI::getInstance();
+		$url = JURI::getInstance();
 	break;
 	case "3" :
-	$url = $ownUrl;
+		$url = $ownUrl;
 	break;
 	default : 
-	JError::raiseNotice( 100, JText::_('MOD_FACEBOOKLIKE_CHOSE_URL_METHOD') );
-	$url = null;
+		$url = JURI::base();
 	break;
 }
 
@@ -52,7 +51,7 @@ $loadApi	  = $params->get("loadApi","1");
 $copyright	  = $params->get("copyright","1");
 $css 		  = $params->get("specifict_css","");
 
-//Set this to 1 if you want to remove my name from the source code! Thanks for your support???????????????
+//Set this to 1 if you want to remove my name from the source code!
 $removeCopyright = $params->get("removeCopyright","0");
 
 //Will load the deafult language tag - for your site
@@ -67,22 +66,23 @@ $OGsitename   = $params->get("sitename","");
 $OGappid 	  = $params->get("appID","");
 
 
-if($OGtitle):	$document->addCustomTag('<meta property="og:title" content="'.$OGtitle.'" />');
+if($OGtitle):	
+	$document->addCustomTag('<meta property="og:title" content="'.$OGtitle.'" />');
 endif;	
-if($OGtype):	$document->addCustomTag('<meta property="og:type" content="'.$OGtype.'" />
-');
+if($OGtype):
+	$document->addCustomTag('<meta property="og:type" content="'.$OGtype.'" />');
 endif;	
-if($OGurl):		$document->addCustomTag('<meta property="og:url" content="'.$OGurl.'" />
-');
+if($OGurl):	
+	$document->addCustomTag('<meta property="og:url" content="'.$OGurl.'" />');
 endif;	
-if($OGimage):	$document->addCustomTag('<meta property="og:image" content="'.$OGimage.'" />
-');
+if($OGimage):	
+	$document->addCustomTag('<meta property="og:image" content="'.$OGimage.'" />');
 endif;	
-if($OGsitename): $document->addCustomTag('<meta property="og:sitename" content="'.$OGsitename.'" />
-');
+if($OGsitename): 
+	$document->addCustomTag('<meta property="og:sitename" content="'.$OGsitename.'" />');
 endif;
-if($OGappid): 	$document->addCustomTag('<meta property="fb:admins" content="'.$OGappid.'" />
-');
+if($OGappid): 	
+	$document->addCustomTag('<meta property="fb:admins" content="'.$OGappid.'" />');
 endif;
 
 //Includes the XFBML
@@ -153,7 +153,5 @@ $XFBMLView = '
 	>
 	</fb:like>
 	';
-
-
 
 require_once(JModuleHelper::getLayoutPath('mod_facebooklike'));

@@ -2,7 +2,7 @@
 
 /**
  * Facebook Like Button for Joomla
- * @package Joomla 1.6 | Joomla 1.7 | Joomla 2.5
+ * @package Joomla 2.5
  * @version 1.4
  * @subpackage plg_vombieFacebookLike
  * @copyright (C) 2011 KMweb.dk and Martiinkolle.dk

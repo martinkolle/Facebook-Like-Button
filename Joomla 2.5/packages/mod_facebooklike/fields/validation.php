@@ -1,7 +1,7 @@
 <?php
 /**
  * Facebook Like Button for Joomla
- * @package Joomla 1.7
+ * @package Joomla 2.5
  * @version 1.4
  * @subpackage mod_facebooklike
  * @copyright (C) 2011 KMweb.dk and Martiinkolle.dk

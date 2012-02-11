@@ -1,8 +1,8 @@
 <?php
 /**
  * Facebook Like Button for Joomla
- * @package Joomla 1.5
- * @version 1.4.1
+ * @package Joomla 2.5
+ * @version 1.4.2
  * @subpackage mod_facebooklike
  * @copyright (C) 2011 KMweb.dk and Martiinkolle.dk
  * @license http://www.gnu.org/copyleft/gpl.html GNU/GPL v.2
@@ -18,7 +18,6 @@ defined('_JEXEC') or die('Restricted access'); ?>
 switch($loadAsWhat){
 	case "1" : //Iframe
 		echo $iframeView;
-		$addScript;
 	break;
 
 	case "2" : //HTML 5

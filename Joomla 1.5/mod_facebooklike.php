@@ -23,17 +23,16 @@ $http 		  = ($httpsOrNot == '1') ? 'http://':'https://';
 
 switch($autoDetectUrl){
 	case "1" : //Site Url
-	$url = JURI::base();
+		$url = JURI::base();
 	break;
 	case "2": //Page Url
-	$url = JURI::current();
+		$url = JURI::current();
 	break;
 	case "3" :
-	$url = $ownUrl;
+		$url = $ownUrl;
 	break;
 	default : 
-	JError::raiseNotice( 100, JText::_('MOD_FACEBOOKLIKE_CHOSE_URL_METHOD') );
-	$url = null;
+		$url = JURI::base();
 	break;
 }
 
@@ -55,7 +54,7 @@ $css 		  = $params->get("specifict_css","");
 //Set this to 1 if you want to remove my name from the source code!
 $removeCopyright = $params->get("removeCopyright","0");
 
-//Will load the deafult language tag - for your site
+//Will load the deafult language tag at your site
 $langTag 	  = str_replace("-","_",$lang->getTag());
 
 //Includes the XFBML
@@ -78,7 +77,6 @@ $iframeView ='
 	<iframe 
 		id="facebookLikeButton"
 		src="'. $http .'www.facebook.com/plugins/like.php?
-
 		locale='.$langTag.'&amp;
 		href='. $url.'&amp;
 		send='.$sendButton.'&amp;
