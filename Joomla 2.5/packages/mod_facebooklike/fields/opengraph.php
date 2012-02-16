@@ -20,9 +20,22 @@ class JFormFieldopengraph extends JFormField
 	{
 		$enabled = JPluginHelper::isEnabled('system', 'vombiefacebooklike');
 		if(!$enabled):
-			return '<a style="color:red;font-size:14px;font-weight:bold;" href="index.php?option=com_plugins&view=plugins&filter_search=facebook%20like">'.JText::_('MOD_FACEBOOKLIKE_ENABLE_PLUGIN').'</a>';
+
+		//find the extention_id to the plugin
+		$db 	= JFactory::getDBO();
+		$query 	= $db->getQuery(true);
+		$query->select('extension_id');
+		$query->from('#__extensions');
+		$query->where('folder = "system" AND element = "vombiefacebooklike"');
+		$db->setQuery((string)$query);
+		$result = $db->loadResult();
+
+		//We are using a popup to enable the plugin.
+		JHTML::_('behavior.modal');
+
+			return '<a style="color:red;font-size:14px;font-weight:bold;" rel="{handler:\'iframe\',size:{x:1000,y:500}}" class="modal" href="index.php?option=com_plugins&task=plugin.edit&extension_id='.$result.'">'.JText::_('MOD_FACEBOOKLIKE_ENABLE_PLUGIN').'</a>';
 		else:
-			return '<a style="color:green;font-size:14px;font-weight:bold;" href="index.php?option=com_plugins&view=plugins&filter_search=facebook%20like">'.JText::_('MOD_FACEBOOKLIKE_ENABLED').'</a>';
+			return '<a style="color:green;font-size:14px;font-weight:bold;" rel="{handler:\'iframe\',size:{x:1000,y:500}}" class="modal" href="index.php?option=com_plugins&task=plugin.edit&extension_id='.$result.'">'.JText::_('MOD_FACEBOOKLIKE_ENABLED').'</a>';
 		endif;
 	}
 }
