@@ -1,4 +1,4 @@
-VombieMusic for Joomla
+Facebook Like button for Joomla 1.5 and 2.5
 ----
 
 With this module for Joomla 1.5 and 2.5 is it possible to add Facebook Like button to Joomla!
