@@ -14,4 +14,7 @@
 	</files>
 	<config>
 	</config>
+	<updateservers>
+		<server type="collection">http://update.martiinkolle.dk/xml/extensions.xml</server>
+	</updateservers>
 </extension>
