@@ -28,11 +28,11 @@ window.addEvent('domready', function(){
 var link = new Element('a', {
     href: 'https://developers.facebook.com/docs/opengraph/',
     'class': 'graph_documentation',
-    html: '".JText::_('MOD_FACEBOOKLIKE_READ_DOC')."',
+    html: '".JText::_('MOD_FACEBOOKLIKE_READ_DOC')."'
 });
 var image = new Element('img', {
     src: '../modules/mod_facebooklike/fields/open_graph_help.png',
-    'class': 'graph_image',
+    'class': 'graph_image'
 });
 	$$('p.tip').adopt(link);
 	$$('p.tip').adopt(image);
