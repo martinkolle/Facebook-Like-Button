@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <extension type="package" version="2.5" method="upgrade">
-<name>Facebook Like Button</name>
+<name>Facebook Like</name>
 <author>Martin Kollerup</author>
 <creationDate>January 2012</creationDate>
 <packagename>facebooklike</packagename>
