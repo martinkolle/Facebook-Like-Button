@@ -60,7 +60,7 @@ color: #00922D !important;" href="http://extensions.joomla.org/extensions/social
 	</languages>
 	
 		<params addpath="/modules/mod_facebooklike/fields">
-			<param type="validation"/>
+			<param type="css"/>
 
 			<param type="spacer" default="MOD_FACEBOOKLIKE_GENERAL_SETTINGS"/>
 			<param type="radio" name="autoDetectUrl" label="MOD_FACEBOOKLIKE_AUTODETECTURL" description="MOD_FACEBOOKLIKE_AUTODETECTURL" default="3" class="autodetect">
@@ -137,4 +137,22 @@ color: #00922D !important;" href="http://extensions.joomla.org/extensions/social
 			</param>				
 
 		</params>
+		<params group="opengraph" label="MOD_FACEBOOKLIKE_OPEN_GRAPH">
+			<param type="opengraph" />
+			
+			<param name="title" type="text" label="MOD_FACEBOOKLIKE_OG_TITLE" description="MOD_FACEBOOKLIKE_OG_TITLE_DESC" />
+
+			<param name="type" type="text" label="MOD_FACEBOOKLIKE_OG_TYPE" description="MOD_FACEBOOKLIKE_OG_TYPE_DESC" />
+
+			<param name="image" type="media" label="MOD_FACEBOOKLIKE_OG_IMAGE" description="MOD_FACEBOOKLIKE_OG_IMAGE_DESC" />
+			
+			<param name="ogURL" type="text" label="MOD_FACEBOOKLIKE_OG_URL" description="MOD_FACEBOOKLIKE_OG_URL" />
+
+			<param name="sitename" type="text" label="MOD_FACEBOOKLIKE_OG_SITENAME" description="MOD_FACEBOOKLIKE_OG_SITENAME_DESC" />
+
+			<param name="appID" type="text" label="MOD_FACEBOOKLIKE_OG_APPID" description="MOD_FACEBOOKLIKE_OG_APPID_DESC" />
+			<param name="OGdescription" type="text" label="MOD_FACEBOOKLIKE_OG_DESCRIPTION" description="MOD_FACEBOOKLIKE_OG_DESCRIPTION_DESC" />
+
+		</params>
+
 </install>

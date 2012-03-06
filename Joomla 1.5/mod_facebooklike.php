@@ -57,6 +57,41 @@ $removeCopyright = $params->get("removeCopyright","0");
 //Will load the deafult language tag at your site
 $langTag 	  = str_replace("-","_",$lang->getTag());
 
+/*
+* Open Graph integration
+* Need to have plugin installed - Vombie Facebook Like
+*/
+$OGtitle	  = $params->get("title",);
+$OGtype		  = $params->get("type",);
+$OGimage	  = JURI::base().$params->get("image",);
+$OGurl 		  = $params->get("ogURL",);
+$OGsitename   = $params->get("sitename",);
+$OGappid 	  = $params->get("appID",);
+$OGdescription= $params->get("OGdescription",)
+
+
+if($OGtitle):	
+	$document->addCustomTag('<meta property="og:title" content="'.$OGtitle.'" />');
+endif;	
+if($OGtype):
+	$document->addCustomTag('<meta property="og:type" content="'.$OGtype.'" />');
+endif;	
+if($OGurl):	
+	$document->addCustomTag('<meta property="og:url" content="'.$OGurl.'" />');
+endif;	
+if($OGimage):	
+	$document->addCustomTag('<meta property="og:image" content="'.$OGimage.'" />');
+endif;	
+if($OGsitename): 
+	$document->addCustomTag('<meta property="og:sitename" content="'.$OGsitename.'" />');
+endif;
+if($OGappid): 	
+	$document->addCustomTag('<meta property="fb:admins" content="'.$OGappid.'" />');
+endif;
+if($OGdescription):
+	$document->addCustomtag('<meta property="og:description" content="'.$OGdescription.'"/>');
+endif;
+
 //Includes the XFBML
 	$loadApiXFBML = '
 <div id="fb-root"></div>
