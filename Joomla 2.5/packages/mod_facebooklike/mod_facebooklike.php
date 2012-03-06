@@ -60,7 +60,7 @@ $langTag 	  = str_replace("-","_",$lang->getTag());
 //Open graph
 $OGtitle	  = $params->get("title","");
 $OGtype		  = $params->get("type","");
-$OGimage	  = JURI::base().$params->get("image","");
+$OGimage	  = $params->get("image","");
 $OGurl 		  = $params->get("ogURL","");
 $OGsitename   = $params->get("sitename","");
 $OGappid 	  = $params->get("appID","");
@@ -77,7 +77,7 @@ if($OGurl):
 	$document->addCustomTag('<meta property="og:url" content="'.$OGurl.'" />');
 endif;	
 if($OGimage):	
-	$document->addCustomTag('<meta property="og:image" content="'.$OGimage.'" />');
+	$document->addCustomTag('<meta property="og:image" content="'.JURI::base().$OGimage.'" />');
 endif;	
 if($OGsitename): 
 	$document->addCustomTag('<meta property="og:sitename" content="'.$OGsitename.'" />');
