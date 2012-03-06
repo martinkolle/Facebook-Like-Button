@@ -10,7 +10,7 @@
  **/
 
 // no direct access
-defined('_JEXEC') or die('Restricted access');
+defined('_JEXEC') or die;
 
 //Load general things
 $document	  = JFactory::getDocument();
