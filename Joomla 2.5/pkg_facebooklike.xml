@@ -10,7 +10,7 @@
 <authorUrl>martiinkolle.dk</authorUrl>
 <packager>Martiinkolle.dk</packager>
 <packagerurl>http://martiinkolle.dk</packagerurl>
-<description>Package install of Facebook Like button for joomla. Installed: plg_vombiefacebooklike & mod_facebooklike </description>
+<description>Package install of Facebook Like button for joomla. Installed: plg_vombiefacebooklike and mod_facebooklike </description>
 <scriptfile>script.php</scriptfile>
 
 <files folder="packages">
