@@ -26,7 +26,7 @@ switch($autoDetectUrl){
 		$url = JURI::base();
 	break;
 	case "2": //Page Url
-		$url = JURI::getInstance();
+		$url = JURI::current();
 	break;
 	case "3" :
 		$url = $ownUrl;
@@ -64,6 +64,7 @@ $OGimage	  = JURI::base().$params->get("image","");
 $OGurl 		  = $params->get("ogURL","");
 $OGsitename   = $params->get("sitename","");
 $OGappid 	  = $params->get("appID","");
+$OGdescription= $params->get("OGdescription","");
 
 
 if($OGtitle):	
@@ -80,6 +81,9 @@ if($OGimage):
 endif;	
 if($OGsitename): 
 	$document->addCustomTag('<meta property="og:sitename" content="'.$OGsitename.'" />');
+endif;
+if($OGdescription): 	
+	$document->addCustomTag('<meta property="og:description" content="'.$OGdescription.'" />');
 endif;
 if($OGappid): 	
 	$document->addCustomTag('<meta property="fb:admins" content="'.$OGappid.'" />');
@@ -106,7 +110,6 @@ $iframeView ='
 	<iframe 
 		id="facebookLikeButton"
 		src="'. $http .'www.facebook.com/plugins/like.php?
-
 		locale='.$langTag.'&amp;
 		href='. $url.'&amp;
 		send='.$sendButton.'&amp;

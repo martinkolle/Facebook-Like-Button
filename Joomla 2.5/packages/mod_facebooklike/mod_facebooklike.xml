@@ -39,7 +39,6 @@ Facebook like button for Joomla 1.7/2.5 by Martiinkolle.dk
 	<config>
 		<fields name="params" addfieldpath="/modules/mod_facebooklike/fields">
 		<fieldset name="basic">
-			<field type="Validation"/>
 			<field type="spacer" name="MOD_FACEBOOKLIKE_GENERAL_SETTINGS"/>
 			<field type="radio" name="autoDetectUrl" label="MOD_FACEBOOKLIKE_AUTODETECTURL" description="MOD_FACEBOOKLIKE_AUTODETECTURL_DESC" default="1" class="autodetect">
 				<option value="1">MOD_FACEBOOKLIKE_SITE_URL</option>
@@ -114,21 +113,18 @@ Facebook like button for Joomla 1.7/2.5 by Martiinkolle.dk
 				<option value="0">MOD_FACEBOOKLIKE_NO</option>
 			</field>				
 		</fieldset>
-		<fieldset name="opengraph" label="MOD_FACEBOOKLIKE_OPEN_GRAPH" description="MOD_FACEBOOKLIKE_OPENGRAPH" class="opengraph">
+		<fieldset name="opengraph" label="MOD_FACEBOOKLIKE_OPEN_GRAPH" class="opengraph">
 
 			<field type="opengraph" />
 			
 			<field name="title" type="text" label="MOD_FACEBOOKLIKE_OG_TITLE" description="MOD_FACEBOOKLIKE_OG_TITLE_DESC" />
-
 			<field name="type" type="text" label="MOD_FACEBOOKLIKE_OG_TYPE" description="MOD_FACEBOOKLIKE_OG_TYPE_DESC" />
-
 			<field name="image" type="media" label="MOD_FACEBOOKLIKE_OG_IMAGE" description="MOD_FACEBOOKLIKE_OG_IMAGE_DESC" />
-			
 			<field name="ogURL" type="text" label="MOD_FACEBOOKLIKE_OG_URL" description="MOD_FACEBOOKLIKE_OG_URL" />
-
 			<field name="sitename" type="text" label="MOD_FACEBOOKLIKE_OG_SITENAME" description="MOD_FACEBOOKLIKE_OG_SITENAME_DESC" />
-
 			<field name="appID" type="text" label="MOD_FACEBOOKLIKE_OG_APPID" description="MOD_FACEBOOKLIKE_OG_APPID_DESC" />
+			<field name="OGdescription" type="text" label="MOD_FACEBOOKLIKE_OG_DESCRIPTION" description="MOD_FACEBOOKLIKE_OG_DESCRIPTION_DESC" />
+
 
 		</fieldset>
 		</fields>
