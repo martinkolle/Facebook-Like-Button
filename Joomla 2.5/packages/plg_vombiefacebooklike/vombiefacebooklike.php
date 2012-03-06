@@ -21,29 +21,30 @@ class plgSystemVombieFacebookLike extends JPlugin
 
 	public function onAfterRender()
 	{
-		$app = &JFactory::getApplication();
 
-		$module = JModuleHelper::getModule('mod_facebooklike');
+	$docType 	= &JFactory::getDocument()->getType();
+	
+	if ($docType == 'html'):
+		$app 		= &JFactory::getApplication();
+		if($app->isAdmin() || strpos($_SERVER["PHP_SELF"], "index.php") === false){return;}	
+		$module 	= JModuleHelper::getModule('mod_facebooklike');
 		$moduleParams = new JRegistry();
 		$moduleParams->loadString($module->params);
-		$title 		= $moduleParams->get('title',null);
-		$type 		= $moduleParams->get('type',null);
-		$image 		= $moduleParams->get('image',null);
-		$ogURL 		= $moduleParams->get('ogURL',null);
-		$sitename 	= $moduleParams->get('sitename',null);
-		$appID 		= $moduleParams->get('appID',null);
+		$title 		= $moduleParams->get('title',false);
+		$type 		= $moduleParams->get('type',false);
+		$image 		= $moduleParams->get('image',false);
+		$ogURL 		= $moduleParams->get('ogURL',false);
+		$sitename 	= $moduleParams->get('sitename',false);
+		$appID 		= $moduleParams->get('appID',false);
+		$OGdesc		= $moduleParams->get('OGdescription',false);
 
-		if($app->isAdmin() || strpos($_SERVER["PHP_SELF"], "index.php") === false)
-		{
-			return;
-		}
-
-		if ($title || $type || $image || $ogURL || $sitename || $appID) {
+		if ($title || $type || $image || $ogURL || $sitename || $appID || $OGdesc) {
 				$buffer = JResponse::getBody();
 				$buffer = str_replace ("<html", '<html xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml" ', $buffer);
 				JResponse::setBody($buffer);
 			return true;
 		}
+	endif;
 	}
 }
 ?>
