@@ -1,0 +1,10 @@
+; $Id$
+name = Facebook Like Button
+description = Adds a configurable <em>Like</em> button for Facebook to each selected node type, as well as a configurable block with a <em>Like</em> box in it.
+core = 7.x
+configure = admin/config/vombielikebutton
+version = "7.x-1.0"
+core = "7.x"
+project = "vombielikebutton"
+datestamp = "1307959015"
+
