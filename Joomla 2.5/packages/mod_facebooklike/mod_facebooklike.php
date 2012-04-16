@@ -50,13 +50,15 @@ $font		  = $params->get("font","arial");
 $loadApi	  = $params->get("loadApi","1");
 $copyright	  = $params->get("copyright","1");
 $css 		  = $params->get("specifict_css","");
+$langTag 	  = $params->get("language",false);
 
 //Set this to 1 if you want to remove my name from the source code!
 $removeCopyright = $params->get("removeCopyright","0");
 
 //Will load the deafult language tag - for your site
+if($langTag == false){
 $langTag 	  = str_replace("-","_",$lang->getTag());
-
+}
 //Open graph
 $OGtitle	  = $params->get("title","");
 $OGtype		  = $params->get("type","");

@@ -62,6 +62,7 @@ Facebook like button for Joomla 2.5 by Martiinkolle.dk
 				<option value="1">MOD_FACEBOOKLIKE_YES</option>
 				<option value="0">MOD_FACEBOOKLIKE_NO</option>
 			</field>
+			<field name="language" type="text" default="" label="MOD_FACEBOOKLIKE_LANGUAGE" description="MOD_FACEBOOKLIKE_LANGUAGE_DESC" />
 		</fieldset>
 
 		<fieldset name="advanced">
@@ -125,11 +126,7 @@ Facebook like button for Joomla 2.5 by Martiinkolle.dk
 			<field name="appID" type="text" label="MOD_FACEBOOKLIKE_OG_APPID" description="MOD_FACEBOOKLIKE_OG_APPID_DESC" />
 			<field name="OGdescription" type="text" label="MOD_FACEBOOKLIKE_OG_DESCRIPTION" description="MOD_FACEBOOKLIKE_OG_DESCRIPTION_DESC" />
 
-
 		</fieldset>
 		</fields>
 	</config>
-	<updateservers>
-		<server type="collection">http://update.martiinkolle.dk/xml/extensions.xml</server>
-	</updateservers>
 </extension>
