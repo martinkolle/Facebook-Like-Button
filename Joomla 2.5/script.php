@@ -10,9 +10,9 @@ class pkg_FacebookLikeInstallerScript
 		$enabled = JPluginHelper::isEnabled('system', 'vombiefacebooklike');
 
 		echo '
-<style type="text/css">#facebooklike ol li, #facebooklike p{font-size:14px}</style>
-<div style="width:100%" id="facebooklike"> 
-<div style="width:45%; float:left;">
+<style type="text/css">#facebooklike ol li, #facebooklike p{font-size:14px}.adminform th{display:none !important:}</style>
+<div style="width:100%;padding-top:20px;" id="facebooklike"> 
+<div style="width:45%; float:left; height:60px;">
 <h1 style="color:#136AA5;font-size:25px;">Thanks for installing Facebook Like!</h1>';
 	if (!$enabled) : 
 		echo '<span style="color:red; padding:7px;margin:7px;">Please enable <a href="index.php?option=com_plugins&view=plugins&filter_search=facebook%20like">Facebook Like Button Plugin</a> if you are going to use "Open Graph". (not optional!)</span>';
@@ -31,6 +31,7 @@ color: #00922D !important;" href="http://extensions.joomla.org/extensions/social
 	$file = JPATH_BASE.DS.'modules'.DS.'mod_facebooklike'.DS.'fields'.DS.'validation.php';
 	if (file_exists($file)) {
 		JFile::delete($file);
+		echo $file.' have been removed';
 	}
 	}
 }
