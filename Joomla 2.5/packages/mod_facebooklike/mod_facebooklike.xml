@@ -7,7 +7,7 @@
 	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
 	<authorEmail>martiinkolle@gmail.com</authorEmail>
 	<authorUrl>http://martiinkolle.dk</authorUrl>
-	<version>1.4.3</version>
+	<version>1.4.5</version>
 	<description>
 <![CDATA[
 Facebook like button for Joomla 2.5 by Martiinkolle.dk
@@ -62,7 +62,6 @@ Facebook like button for Joomla 2.5 by Martiinkolle.dk
 				<option value="1">MOD_FACEBOOKLIKE_YES</option>
 				<option value="0">MOD_FACEBOOKLIKE_NO</option>
 			</field>
-			<field name="language" type="text" default="" label="MOD_FACEBOOKLIKE_LANGUAGE" description="MOD_FACEBOOKLIKE_LANGUAGE_DESC" />
 		</fieldset>
 
 		<fieldset name="advanced">
@@ -112,7 +111,9 @@ Facebook like button for Joomla 2.5 by Martiinkolle.dk
 			<field name="copyright" type="list" default="1" label="MOD_FACEBOOKLIKE_COPYRIGHT" description="MOD_FACEBOOKLIKE_COPYRIGHT_DESC">
 				<option value="1">MOD_FACEBOOKLIKE_YES</option>
 				<option value="0">MOD_FACEBOOKLIKE_NO</option>
-			</field>				
+			</field>	
+			<field name="language" type="text" default="" label="MOD_FACEBOOKLIKE_LANGUAGE" description="MOD_FACEBOOKLIKE_LANGUAGE_DESC" />
+			
 		</fieldset>
 		<fieldset name="opengraph" label="MOD_FACEBOOKLIKE_OPEN_GRAPH" class="opengraph">
 

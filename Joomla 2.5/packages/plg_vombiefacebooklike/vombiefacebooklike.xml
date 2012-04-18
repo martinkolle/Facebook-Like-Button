@@ -7,7 +7,7 @@
 	<authorUrl>http://matiinkolle.dk</authorUrl>
 	<copyright>(C) 2012 Copyright Martiinkolle.dk</copyright>
 	<license>GNU/GPL v.2</license>
-	<version>1.1</version>
+	<version>1.4.5</version>
 	<description>Integration of open graph for mod_facebooklike</description>
 	<files>
 		<filename plugin="vombiefacebooklike">vombiefacebooklike.php</filename>
