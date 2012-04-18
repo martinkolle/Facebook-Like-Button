@@ -87,6 +87,7 @@ color: #00922D !important;" href="http://extensions.joomla.org/extensions/social
 				<option value="box_count">Box_count</option>
 				<option value="button_count">Button_count</option>
 			</param>
+			<param name="language" type="text" default="" label="MOD_FACEBOOKLIKE_LANGUAGE" description="MOD_FACEBOOKLIKE_LANGUAGE_DESC" />
 		</params>
 
 		<params group="advanced">
