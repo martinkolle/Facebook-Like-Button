@@ -2,7 +2,7 @@
 /**
  * Facebook Like Button for Joomla
  * @package Joomla 1.5
- * @version 1.4
+ * @version 1.5
  * @subpackage mod_facebooklike
  * @copyright (C) 2011 KMweb.dk and Martiinkolle.dk
  * @license http://www.gnu.org/copyleft/gpl.html GNU/GPL v.2
@@ -50,16 +50,20 @@ $font		  = $params->get("font","arial");
 $loadApi	  = $params->get("loadApi","1");
 $copyright	  = $params->get("copyright","1");
 $css 		  = $params->get("specifict_css","");
+$langTag 	  = $params->get("language",null);
 
 //Set this to 1 if you want to remove my name from the source code!
 $removeCopyright = $params->get("removeCopyright","0");
 
 //Will load the deafult language tag at your site
+if($langTag == null){
 $langTag 	  = str_replace("-","_",$lang->getTag());
+}
 
 /*
 * Open Graph integration
-* Need to have plugin installed - Vombie Facebook Like
+* This have not been annoced to be working, but it have been ported from the J!2.5 version, and is working!
+* To get this to work, you may need to install a Plugin "Vombie Facebook Like"
 */
 $OGtitle	  = $params->get("title",);
 $OGtype		  = $params->get("type",);
