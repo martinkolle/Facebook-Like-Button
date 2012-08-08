@@ -15,7 +15,7 @@ defined('_JEXEC') or die; ?>
 <div class="VombieLikeButton<?php echo $suffix;?>" style="<?php echo $css; ?>">
 <?php
 
-switch($loadAsWhat){
+switch($loadAsWhat) {
 	case "1" : //Iframe
 		echo $iframeView;
 	break;

@@ -17,20 +17,9 @@
 <div style="width:100%" id="facebooklike"> 
 	<div style="width:45%; float:left;">
 	<h1 style="color:#136AA5;font-size:25px;">Thanks for installing Facebook Like!</h1>
-	<p>Some new features have been added in 1.4.x</p>
-	<ol>
-		<li>(<b>1.4.1</b>) Added CSS field</li>
-		<li>Supporting SEF urls</li>
-		<li>Several bugfixes from 1.3.1 (Like style)</li>
-		<li>Added design - overrride Joomla standard (backend)</li>
-		<li>HTML 5 support</li>
-		<li>Re-design URL function</li>
-		<li>Re-design view function (html5/iframe/fb:like)</li>
-	</ol>
 	<br />
-	Cheers, <a href="http://martiinkolle.dk" target="_blank">Martiinkolle.dk</a>
 </div>
-<div style="width:35%; float:left;margin-top:50px;">
+<div style="width:35%; float:left;">
 <a style="margin-top:150px;border: 1px solid #3B6F1B;border-radius: 5px 5px 5px 5px;font-size: 30px;margin-top: 35px;padding: 10px;text-decoration: none;width: 60%;background:#00922D;background: -webkit-gradient(linear, 50% 100%, 50% 0%, from(#00922D), to(#00900D));background: -moz-linear-gradient(90deg, #00922D, #00900D);filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#CCCCCC', endColorstr='#F1F1F1');color:#cccccc !important;" href="index.php?option=com_modules&filter_type=mod_facebooklike">Go to module</a>
 
 <a style="margin-top:180px;border-radius: 5px 5px 5px 5px;font-size: 30px;margin-top: 35px;padding: 10px;text-decoration: none;width: 60%;background: #CCC;
@@ -87,7 +76,6 @@ color: #00922D !important;" href="http://extensions.joomla.org/extensions/social
 				<option value="box_count">Box_count</option>
 				<option value="button_count">Button_count</option>
 			</param>
-			<param name="language" type="text" default="" label="MOD_FACEBOOKLIKE_LANGUAGE" description="MOD_FACEBOOKLIKE_LANGUAGE_DESC" />
 		</params>
 
 		<params group="advanced">
@@ -135,8 +123,8 @@ color: #00922D !important;" href="http://extensions.joomla.org/extensions/social
 			<param name="copyright" type="list" default="1" label="MOD_FACEBOOKLIKE_COPYRIGHT" description="MOD_FACEBOOKLIKE_COPYRIGHT_DESC">
 				<option value="1">MOD_FACEBOOKLIKE_YES</option>
 				<option value="0">MOD_FACEBOOKLIKE_NO</option>
-			</param>				
-
+			</param>
+			<param name="language" type="text" default="" label="MOD_FACEBOOKLIKE_LANGUAGE" description="MOD_FACEBOOKLIKE_LANGUAGE_DESC" />
 		</params>
 		<params group="opengraph" label="MOD_FACEBOOKLIKE_OPEN_GRAPH">
 			<param type="opengraph" />

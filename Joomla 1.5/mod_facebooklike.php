@@ -65,13 +65,13 @@ $langTag 	  = str_replace("-","_",$lang->getTag());
 * This have not been annoced to be working, but it have been ported from the J!2.5 version, and is working!
 * To get this to work, you may need to install a Plugin "Vombie Facebook Like"
 */
-$OGtitle	  = $params->get("title",);
-$OGtype		  = $params->get("type",);
-$OGimage	  = JURI::base().$params->get("image",);
-$OGurl 		  = $params->get("ogURL",);
-$OGsitename   = $params->get("sitename",);
-$OGappid 	  = $params->get("appID",);
-$OGdescription= $params->get("OGdescription",)
+$OGtitle	  = $params->get("title","");
+$OGtype		  = $params->get("type","");
+$OGimage	  = JURI::base().$params->get("image","");
+$OGurl 		  = $params->get("ogURL","");
+$OGsitename   = $params->get("sitename","");
+$OGappid 	  = $params->get("appID","");
+$OGdescription= $params->get("OGdescription","");
 
 
 if($OGtitle):	
