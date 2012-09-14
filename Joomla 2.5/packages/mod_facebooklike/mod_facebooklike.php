@@ -82,7 +82,7 @@ if($OGimage):
 	$document->addCustomTag('<meta property="og:image" content="'.JURI::base().$OGimage.'" />');
 endif;	
 if($OGsitename): 
-	$document->addCustomTag('<meta property="og:sitename" content="'.$OGsitename.'" />');
+	$document->addCustomTag('<meta property="og:site_name" content="'.$OGsitename.'" />');
 endif;
 if($OGdescription): 	
 	$document->addCustomTag('<meta property="og:description" content="'.$OGdescription.'" />');
