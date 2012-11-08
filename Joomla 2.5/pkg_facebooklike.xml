@@ -19,6 +19,6 @@
 
 </files>
 	<updateservers>
-		<server>http://update.kollerups.dk/facebooklike.xml</server>
+		<server type="extension">http://update.kollerups.dk/facebooklike.xml</server>
 	</updateservers>
 </extension>
