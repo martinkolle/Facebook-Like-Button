@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="3.0.0" method="upgrade">
+<name>Facebook Like</name>
+<author>Martin Kollerup</author>
+<creationDate>January 2012</creationDate>
+<packagename>facebooklike</packagename>
+<version>1.4.6</version>
+<url>http://martiinkolle.dk/</url>
+<authorEmail>martiinkolle@gmail.com</authorEmail>
+<authorUrl>martiinkolle.dk</authorUrl>
+<packager>Martiinkolle.dk</packager>
+<packagerurl>http://martiinkolle.dk</packagerurl>
+<description>Facebook Like Button for Joomla.</description>
+<scriptfile>install.php</scriptfile>
+
+<files>
+	<file type="module" id="mod_facebooklike" >mod_facebooklike.zip</file>
+	<file type="plugin" id="vombiefacebooklike" group="system">plg_vombiefacebooklike.zip</file>
+</files>
+	<updateservers>
+		<server type="extension">http://update.kollerups.dk/facebooklike.xml</server>
+	</updateservers>
+</extension>
