@@ -16,7 +16,7 @@ class plgSystemVombieFacebookLike extends JPlugin
 {	
 
 	/**
-	* Will add ogp and xmlns to the <html>, so it works in older Internet explore versions. 
+	* Will add ogp and xmlns to the <html>, so it works in older IE versions. 
 	*/
 
 	public function onAfterRender()
