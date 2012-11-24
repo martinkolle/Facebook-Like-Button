@@ -27,7 +27,8 @@ switch($autoDetectUrl){
 		$url = JURI::base();
 	break;
 	case "2": //Page Url
-		$url = JURI::current();
+		$uri = & JFactory::getURI();
+		$url = $uri->toString();
 	break;
 	case "3" :
 		$url = $ownUrl;
