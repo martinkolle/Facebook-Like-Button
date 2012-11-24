@@ -32,16 +32,7 @@ class JFormFieldopengraph extends JFormField
 		.x{background-image:url(templates/bluestork/images/admin/publish_x.png);background-repeat:no-repeat;}
 		.tick{background-image:url(templates/bluestork/images/admin/tick.png);background-repeat:no-repeat;}
 		.plugin{font-size:14px;font-weight:bold;width:100%;padding-left:18px;}
-
 		');
-		$document->addStyleDeclaration('window.addEvent(\'domready\', function() {
-var span = document.getElementById("jform_params_appID-lbl"),
-    text = document.createTextNode(\'\'+intValue);
-span.innerHTML = \'Lortemand\'; // clear existing
-span.appendChild(text);
-
-
-		});',"text/javascript");
 	$result = null;
 	$html 	= null;
 	$enabled = JPluginHelper::isEnabled('system', 'vombiefacebooklike');
