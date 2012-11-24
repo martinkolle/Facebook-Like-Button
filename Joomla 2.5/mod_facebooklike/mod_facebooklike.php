@@ -27,7 +27,7 @@ switch($autoDetectUrl){
 		$url = JURI::base();
 	break;
 	case "2": //Page Url
-		$uri = & JFactory::getURI();
+		$uri = JFactory::getURI();
 		$url = $uri->toString();
 	break;
 	case "3" :
@@ -52,12 +52,17 @@ $font		  = $params->get("font","arial");
 $loadApi	  = $params->get("loadApi","1");
 $copyright	  = $params->get("copyright","1");
 $langTag 	  = $params->get("language",false);
+$zindex		  = $params->get("zindex",false)
 
 //Will load the deafult language tag - for your site
 if($langTag == false){
 	$langTag 	  = str_replace("-","_",$lang->getTag());
 }
 
+//problems with z-index
+if($zindex == 1){
+	$document->addStyleDeclaration('.fb_edge_widget_with_comment{z-index:2000 !important;}');
+}
 //Open graph
 $OGtitle	  = $params->get("title","");
 $OGtype		  = $params->get("type","");
