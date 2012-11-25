@@ -41,7 +41,7 @@
 		<description>Facebook Like Button</description>
 		<element>mod_facebooklike</element>
 		<type>module</type>
-		<version>1.4.7</version>
+		<version>1.4.8</version>
 		<infourl title="Joomla!">http://martiinkolle.dk</infourl>
 	<downloads>
          <downloadurl type="full" format="tgz"><![CDATA[https://github.com/downloads/martinkolle/Facebook-Like-Button/pkg_facebooklike_J25_1.2.zip]]></downloadurl>
@@ -59,7 +59,7 @@
 		<description>Facebook Like Button</description>
 		<element>mod_facebooklike</element>
 		<type>module</type>
-		<version>1.4.7</version>
+		<version>1.4.8</version>
 		<infourl title="Joomla!">http://martiinkolle.dk</infourl>
 	<downloads>
          <downloadurl type="full" format="tgz"><![CDATA[https://github.com/downloads/martinkolle/Facebook-Like-Button/pkg_facebooklike_J25_1.2.zip]]></downloadurl>
