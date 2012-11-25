@@ -26,14 +26,15 @@ switch($loadAsWhat) {
 		send='.$sendButton.'&amp;
 		layout='. $layout.'&amp;
 		show_faces='.$showPictures.'&amp;
-		width='.$width.'&amp;
-		height='.$height.'&amp;
+		width='.preg_replace("/[^0-9]/","",$width).'&amp;
+		height='.preg_replace("/[^0-9]/","",$height).'&amp;
 		font='.$font.'&amp;
 		action='.$action.'>&amp;
-		colorscheme='.$colorScheme.'" 
+		colorscheme='.$colorScheme.'&amp;
+		appId='.$OGappid.'" 
 		scrolling="no" 
 		frameborder="0" 
-		style="border:none; overflow:hidden; width:'.$width.'px;height:'.$height.'px;"
+		style="border:none; overflow:hidden;"
 		allowTransparency="true">
 	</iframe> 
 	';
@@ -46,7 +47,7 @@ switch($loadAsWhat) {
 		data-send="'.$sendButton.'" 
 		data-layout="'.$layout.'"
 		data-show-faces="'.$showPictures.'"  
-		data-width="'.$width.'" 
+		data-width="'.preg_replace("/[^0-9]/","",$width).'" 
 		data-action="'.$action.'" 
 		data-font="'.$font.'"
 		data-colorscheme="'.$colorScheme.'"
@@ -63,7 +64,7 @@ switch($loadAsWhat) {
 		send="'.$sendButton.'" 
 		layout="'.$layout.'"
 		show-faces="'.$showPictures.'"  
-		width="'.$width.'" 
+		width="'.preg_replace("/[^0-9]/","",$width).'" 
 		action="'.$action.'" 
 		font="'.$font.'"
 		colorscheme="'.$colorScheme.'"
