@@ -55,9 +55,9 @@ Facebook like button for Joomla 3.0
 				<option value="3">MOD_FACEBOOKLIKE_XFBML</option>
 			</field>
 
-			<field name="showPictures" type="radio" class="btn-group" default="1" label="MOD_FACEBOOKLIKE_SHOW_PICTURES" description="MOD_FACEBOOKLIKE_DESC_SHOW_PICTURES">
-				<option value="1">MOD_FACEBOOKLIKE_YES</option>
-				<option value="0">MOD_FACEBOOKLIKE_NO</option>
+			<field name="showPictures" type="radio" class="btn-group" default="true" label="MOD_FACEBOOKLIKE_SHOW_PICTURES" description="MOD_FACEBOOKLIKE_DESC_SHOW_PICTURES">
+				<option value="true">MOD_FACEBOOKLIKE_YES</option>
+				<option value="false">MOD_FACEBOOKLIKE_NO</option>
 			</field>
 			<field name="send" type="radio" class="btn-group" default="1" label="MOD_FACEBOOKLIKE_INCLUDE_SEND" description="MOD_FACEBOOKLIKE_INCLUDE_SEND_DESC">
 				<option value="1">MOD_FACEBOOKLIKE_YES</option>
