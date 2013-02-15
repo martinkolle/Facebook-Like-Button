@@ -161,4 +161,4 @@ $XFBMLView = '
 	</fb:like>
 	';
 
-require_once(JModuleHelper::getLayoutPath('mod_facebooklike'));
+require JModuleHelper::getLayoutPath('mod_facebooklike', $params->get('layout', 'default'));
