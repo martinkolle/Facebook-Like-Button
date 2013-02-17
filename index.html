@@ -1,51 +1,176 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Facebook Like Button for Joomla 1.5, 2.5 & 3.0</title>
+    <title>Facebook like button for Joomla</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simple and easy module to add Facebook like button to Joomla 1.5, 2.5 and 3.0">
+    <meta name="author" content="">
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 20px;
+        padding-bottom: 40px;
+        background-color: #f5f5f5;
+      }
+
+      /* Custom container */
+      .container {
+        margin: 0 auto;
+        max-width: 960px;
+      }
+      .container > hr {
+        margin: 30px 0;
+      }
+
+      /* Main marketing message and sign up button */
+      .jumbotron {
+        margin: 60px 0;
+        text-align: center;
+      }
+      .jumbotron h1 {
+        font-size: 72px;
+        line-height: 1;
+      }
+      .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+      }
+
+      /* Supporting marketing content */
+      .marketing {
+        margin: 60px 0;
+      }
+      .marketing p + h4 {
+        margin-top: 28px;
+      }
+      .list-widget{
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        padding: 15px;
+        position: relative;
+        border-top: 1px solid #eee;
+        background: #fff;
+      }
+      .list-widget ol::before {
+        -webkit-box-shadow: inset 0 16px 8px -20px rgba(0,0,0,0.4);
+        -moz-box-shadow: inset 0 15px 8px -20px rgba(0,0,0,0.4);
+        -webkit-mask-image: -webkit-linear-gradient(left,rgba(0,0,0,0),black 20%,black 80%,rgba(0,0,0,0) 100%);
+        -moz-mask-image: -moz-linear-gradient(left,rgba(0,0,0,0),black 20%,black 80%,rgba(0,0,0,0) 100%);
+        height: 5px;
+        width: 100%;
+        position: relative;
+        content: '';
+        top: -2px;
+        left: 0;
+        display: block;
+        border-top: 1px solid rgba(0,0,0,0.15);
+      }
+  h4{color: #DD390D;font-size: 30px;}
+    </style>
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="js/html5shiv.js"></script>
     <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="ico/favicon.png">
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>Facebook Like Button</h1>
-        <p>Facebook Like button for Joomla 1.5, 1.6, 1.7, 2.5 and 3.0</p>
-
-        <p class="view"><a href="https://github.com/martinkolle/Facebook-Like-Button">View the Project on GitHub <small>martinkolle/Facebook-Like-Button</small></a></p>
-
-        <h2>Download module</h2>
-        <ul>
-          <li><a href="https://github.com/downloads/martinkolle/Facebook-Like-Button/mod_facebooklike_J15_1.4.zip">Joomla <strong>1.5</strong></a></li>
-          <li><a href="http://update.kmweb.dk/facebook-like-button/joomla-25/mod_facebooklike_1.4.8_J25.zip">Joomla <strong>2.5</strong></a></li>
-          <li><a href="http://update.kmweb.dk/facebook-like-button/joomla-30/mod_facebooklike_1.4.8_J30.zip">Joomla <strong>3.0</strong></a></li>
+    <div class="container">
+      <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="old-versions.html">Old versions</a></li>
         </ul>
-      </header>
-      <section>
-<h3>How to use</h3>
-<p>Firstly install the module to Joomla.</p>
-<p>If you are using Open Graph in Joomla 1.6 +, you need to enable the "Facebook like button" plugin.</p>
-<p>Open Graph is not supported in joomla 1.5</p>
+        <h3 class="muted">Facebook Like button for Joomla</h3>
+      </div>
 
-<h3>Need help?</h3>
-<p>You can contact me at the <a href="https://github.com/martinkolle/Facebook-Like-Button/issues/new">help page</a></p>
+      <hr>
 
-<h3>Authors and Contributors</h3>
+      <div class="jumbotron">
+        <h1>Like button made simple</h1>
+        <p class="lead">Why should it be difficult to add a like button to Joomla? I have changed it for you. Simply install and you are ready to get likes!</p>
+        <div class="well" style="max-width: 400px; margin: 0 auto 10px;">
+          <a class="btn btn-success btn-large btn-block" href="http://update.kmweb.dk/facebook-like-button/joomla-25/mod_facebooklike_1.4.8_J25.zip"><i class="icon-download-alt"></i> Joomla 2.5</a>
+          <a class="btn btn-warning btn-large btn-block" href="http://update.kmweb.dk/facebook-like-button/joomla-30/mod_facebooklike_1.4.8_J30.zip"><i class="icon-download-alt"></i> Joomla 3.0</a>
+          <a class="btn btn-large btn-info btn-block" href="old-versions.html"><i class="icon-fast-backward"></i> Old versions</a>
+        </div>
+      </div>
 
-<p>This project is maintained by Martinkolle aka. Martin Kollerup.</p>
+      <hr>
 
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/martinkolle">martinkolle</a></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
+      <div class="row-fluid marketing">
+        <div class="span6"> 
+          <div class="list-widget">
+          <h4>How to install</h4>
+          <p>
+            <ol style="padding-left:10px">
+            <li>Download the module.</li>
+            <li>Install the module in backend</li>
+            <li>Go to "Extensions" -> "Module" -> "facebook Like".</li>
+            <li>Choose how you want to use the module under "Settings"</li>
+            <li>Enjoy a module without credits back to the developer</li>
+          </p>
+          </div>
+        </div>
+
+        <div class="span6">
+          <div class="list-widget">
+            <h4>Know problems</h4>
+            <ol></ol>
+            <div class="accordion" id="accordion">
+              <div class="accordion-group">
+                <div class="accordion-heading">
+                  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                    Hidden comment box
+                  </a>
+                </div>
+                <div id="collapseOne" class="accordion-body collapse in">
+                  <div class="accordion-inner">
+                    <p><b>Solution</b></p>
+                    <p>Enable "Z-index" in the module settings or find a new template. (or find a developer to help you)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="footer">
+        <p>&copy; kmweb.dk and martinkolle 2012</p>
+      </div>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap-transition.js"></script>
+    <script src="js/bootstrap-alert.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+    <script src="js/bootstrap-scrollspy.js"></script>
+    <script src="js/bootstrap-tab.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/bootstrap-popover.js"></script>
+    <script src="js/bootstrap-button.js"></script>
+    <script src="js/bootstrap-collapse.js"></script>
+    <script src="js/bootstrap-carousel.js"></script>
+    <script src="js/bootstrap-typeahead.js"></script>
+
   </body>
 </html>
