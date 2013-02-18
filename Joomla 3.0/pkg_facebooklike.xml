@@ -13,11 +13,11 @@
 <description>Facebook Like Button for Joomla.</description>
 <scriptfile>install.php</scriptfile>
 
-<files>
-	<file type="module" id="mod_facebooklike" >mod_facebooklike.zip</file>
-	<file type="plugin" id="vombiefacebooklike" group="system">plg_vombiefacebooklike.zip</file>
-</files>
-	<updateservers>
-		<server type="extension">http://update.kollerups.dk/facebooklike.xml</server>
-	</updateservers>
+	<files>
+		<file type="module" id="mod_facebooklike" >mod_facebooklike.zip</file>
+		<file type="plugin" id="vombiefacebooklike" group="system">plg_vombiefacebooklike.zip</file>
+	</files>
+    <updateservers>
+        <server type="extension" priority="1" name="Facebook Like Updates"><![CDATA[http://update.kmweb.dk/xml/facebooklike.xml]]></server>
+    </updateservers>
 </extension>
