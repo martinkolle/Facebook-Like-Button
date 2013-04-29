@@ -29,7 +29,7 @@ switch($loadAsWhat) {
 		width='.preg_replace("/[^0-9]/","",$width).'&amp;
 		height='.preg_replace("/[^0-9]/","",$height).'&amp;
 		font='.$font.'&amp;
-		action='.$action.'>&amp;
+		action='.$action.'&amp;
 		colorscheme='.$colorScheme.'&amp;
 		appId='.$OGappid.'" 
 		scrolling="no" 
@@ -54,7 +54,7 @@ switch($loadAsWhat) {
 	>
 	</div>
 	';
-		$addScript;
+		$document->addCustomTag($loadApiXFBML);
 	break;
 
 	case "3" ://XFBML
@@ -71,7 +71,7 @@ switch($loadAsWhat) {
 	>
 	</fb:like>
 	';
-		$addScript;
+		$document->addCustomTag($loadApiXFBML);
 	break;
 
 	default :

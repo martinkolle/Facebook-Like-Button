@@ -91,11 +91,11 @@ if($OGdescription):
 	$document->addCustomTag('<meta property="og:description" content="'.$OGdescription.'" />');
 endif;
 if($OGappid): 	
-	$document->addCustomTag('<meta property="fb:admins" content="'.$OGappid.'" />');
+	$document->addCustomTag('<meta property="fb:app_id" content="'.$OGappid.'" />');
 	$appid = "?appId=".$OGappid;
 endif;
 
-	$loadApiXFBML = '<div id="fb-root"></div>
+	$loadApiXFBML = '
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -103,62 +103,5 @@ endif;
   js.src = "//connect.facebook.net/'.$langTag.'/all.js#xfbml=1'.$appid.'";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, \'script\', \'facebook-jssdk\'));</script>';
-	$addScript	  = $document->addCustomTag($loadApiXFBML);
-
-
-/*Different views*/
-
-//Iframe
-$iframeView ='
-	<iframe 
-		id="facebookLikeButton"
-		src="'. $http .'www.facebook.com/plugins/like.php?
-		locale='.$langTag.'&amp;
-		href='. $url.'&amp;
-		send='.$sendButton.'&amp;
-		layout='. $layout.'&amp;
-		show_faces='.$showPictures.'&amp;
-		width='.preg_replace("/[^0-9]/","",$width).'&amp;
-		height='.preg_replace("/[^0-9]/","",$height).'&amp;
-		font='.$font.'&amp;
-		action='.$action.'&amp;
-		colorscheme='.$colorScheme.'&amp;
-		appId='.$OGappid.'" 
-		scrolling="no" 
-		frameborder="0" 
-		style="border:none; overflow:hidden; width:'.$width.'px;height:'.$height.'px;"
-		allowTransparency="true">
-	</iframe> 
-	';
-
-//HTML 5
-$HTML5View = '
-	<div class="fb-like" 
-		data-href="'.$url.'"
-		data-send="'.$sendButton.'" 
-		data-layout="'.$layout.'"
-		data-show-faces="'.$showPictures.'"  
-		data-width="'.preg_replace("/[^0-9]/","",$width).'" 
-		data-action="'.$action.'" 
-		data-font="'.$font.'"
-		data-colorscheme="'.$colorScheme.'"
-	>
-	</div>
-	';
-
-//XFBML
-$XFBMLView = '
-	<fb:like 
-		href="'.$url.'"
-		send="'.$sendButton.'" 
-		layout="'.$layout.'"
-		show-faces="'.$showPictures.'"  
-		width="'.preg_replace("/[^0-9]/","",$width).'" 
-		action="'.$action.'" 
-		font="'.$font.'"
-		colorscheme="'.$colorScheme.'"
-	>
-	</fb:like>
-	';
 
 require JModuleHelper::getLayoutPath('mod_facebooklike', $params->get('layout', 'default'));

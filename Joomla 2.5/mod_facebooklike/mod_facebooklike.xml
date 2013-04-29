@@ -46,12 +46,12 @@ Facebook like button for Joomla 2.5
 				<option value="3">MOD_FACEBOOKLIKE_OWN_URL</option>
 			</field>
 			<field name="url" type="text" label="MOD_FACEBOOKLIKE_FACEBOOK_URL_IF" description="MOD_FACEBOOKLIKE_FACEBOOK_URL_IF_DESC" default="" size="50"/>
-			<field name="action" type="list" default="1" label="MOD_FACEBOOKLIKE_VERB_LIKE"	description="MOD_FACEBOOKLIKE_DESC_VERB_LIKE">
+			<field name="action" type="list" default="like" label="MOD_FACEBOOKLIKE_VERB_LIKE"	description="MOD_FACEBOOKLIKE_DESC_VERB_LIKE">
 				<option value="like">MOD_FACEBOOKLIKE_LIKE</option>
 				<option value="recommend">MOD_FACEBOOKLIKE_RECOMMEND</option>
 			</field>
 
-			<field name="loadAsWhat" type="list" default="3" label="MOD_FACEBOOKLIKE_FACELIKE_LOAD_AS" description="MOD_FACEBOOKLIKE_FACELIKE_DESC_LOAD_AS">
+			<field name="loadAsWhat" type="list" default="2" label="MOD_FACEBOOKLIKE_FACELIKE_LOAD_AS" description="MOD_FACEBOOKLIKE_FACELIKE_DESC_LOAD_AS">
 				<option value="1">MOD_FACEBOOKLIKE_IFRAME</option>
 				<option value="2">MOD_FACEBOOKLIKE_HTML_5</option>
 				<option value="3">MOD_FACEBOOKLIKE_XFBML</option>
@@ -126,8 +126,6 @@ Facebook like button for Joomla 2.5
 			<field name="sitename" type="text" label="MOD_FACEBOOKLIKE_OG_SITENAME" description="MOD_FACEBOOKLIKE_OG_SITENAME_DESC" />
 			<field name="OGdescription" type="text" label="MOD_FACEBOOKLIKE_OG_DESCRIPTION" description="MOD_FACEBOOKLIKE_OG_DESCRIPTION_DESC" />
 			<field name="appID" type="text" label="MOD_FACEBOOKLIKE_OG_APPID" description="MOD_FACEBOOKLIKE_OG_APPID_DESC" />
-
-
 		</fieldset>
 		</fields>
 	</config>

@@ -17,17 +17,53 @@ defined('_JEXEC') or die; ?>
 
 switch($loadAsWhat) {
 	case "1" : //Iframe
-		echo $iframeView;
+		echo '<iframe 
+				id="facebookLikeButton"
+				src="'. $http .'www.facebook.com/plugins/like.php?
+				locale='.$langTag.'&amp;
+				href='. $url.'&amp;
+				send='.$sendButton.'&amp;
+				layout='. $layout.'&amp;
+				show_faces='.$showPictures.'&amp;
+				width='.preg_replace("/[^0-9]/","",$width).'&amp;
+				height='.preg_replace("/[^0-9]/","",$height).'&amp;
+				font='.$font.'&amp;
+				action='.$action.'&amp;
+				colorscheme='.$colorScheme.'&amp;
+				appId='.$OGappid.'" 
+				scrolling="no" 
+				frameborder="0" 
+				style="border:none; overflow:hidden; width:'.$width.'px;height:'.$height.'px;"
+				allowTransparency="true">
+			</iframe>';
 	break;
 
 	case "2" : //HTML 5
-		echo $HTML5View;
-		$addScript;
+		echo '<div class="fb-like" 
+				data-href="'.$url.'"
+				data-send="'.$sendButton.'" 
+				data-layout="'.$layout.'"
+				data-show-faces="'.$showPictures.'"  
+				data-width="'.preg_replace("/[^0-9]/","",$width).'" 
+				data-action="'.$action.'" 
+				data-font="'.$font.'"
+				data-colorscheme="'.$colorScheme.'"
+			></div>';
+		$document->addCustomTag($loadApiXFBML);
 	break;
 
 	case "3" ://XFBML
-		echo $XFBMLView;
-		$addScript;
+		echo '<fb:like 
+				href="'.$url.'"
+				send="'.$sendButton.'" 
+				layout="'.$layout.'"
+				show-faces="'.$showPictures.'"  
+				width="'.preg_replace("/[^0-9]/","",$width).'" 
+				action="'.$action.'" 
+				font="'.$font.'"
+				colorscheme="'.$colorScheme.'"
+			></fb:like>';
+		$document->addCustomTag($loadApiXFBML);
 	break;
 
 	default :
@@ -35,5 +71,4 @@ switch($loadAsWhat) {
 	break;
 }
 ?>
-
 </div>

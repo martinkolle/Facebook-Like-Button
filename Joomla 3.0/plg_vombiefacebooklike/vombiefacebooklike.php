@@ -19,32 +19,34 @@ class plgSystemVombieFacebookLike extends JPlugin
 	* Will add ogp and xmlns to the <html>, so it works in older Internet explore versions. 
 	*/
 
-	public function onAfterRender()
-	{
+	public function onAfterRender(){
 
-	$docType 	= JFactory::getDocument()->getType();
-	
-	if ($docType == 'html'):
-		$app 		= JFactory::getApplication();
+		//only load if frontend
 		if($app->isAdmin() || strpos($_SERVER["PHP_SELF"], "index.php") === false){return;}	
-		$module 	= JModuleHelper::getModule('mod_facebooklike');
-		$moduleParams = new JRegistry();
-		$moduleParams->loadString($module->params);
-		$title 		= $moduleParams->get('title',false);
-		$type 		= $moduleParams->get('type',false);
-		$image 		= $moduleParams->get('image',false);
-		$ogURL 		= $moduleParams->get('ogURL',false);
-		$sitename 	= $moduleParams->get('sitename',false);
-		$appID 		= $moduleParams->get('appID',false);
-		$OGdesc		= $moduleParams->get('OGdescription',false);
 
-		if ($title || $type || $image || $ogURL || $sitename || $appID || $OGdesc) {
-				$buffer = JResponse::getBody();
-				$buffer = str_replace ("<html", '<html xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml" ', $buffer);
-				JResponse::setBody($buffer);
-			return true;
-		}
-	endif;
+		$docType 	= JFactory::getDocument()->getType();
+		
+		if ($docType == 'html'):
+			$app 		= JFactory::getApplication();
+			$module 	= JModuleHelper::getModule('mod_facebooklike');
+			$moduleParams = new JRegistry();
+			$moduleParams->loadString($module->params);
+			$title 		= $moduleParams->get('title',false);
+			$type 		= $moduleParams->get('type',false);
+			$image 		= $moduleParams->get('image',false);
+			$ogURL 		= $moduleParams->get('ogURL',false);
+			$sitename 	= $moduleParams->get('sitename',false);
+			$appID 		= $moduleParams->get('appID',false);
+			$OGdesc		= $moduleParams->get('OGdescription',false);
+
+			//add open graph xmlns to the html tag
+			if ($title || $type || $image || $ogURL || $sitename || $appID || $OGdesc) {
+					$buffer = JResponse::getBody();
+					$buffer = str_replace ("<html", '<html xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml" ', $buffer);
+					JResponse::setBody($buffer);
+				return true;
+			}
+		endif;
 	}
 }
 ?>

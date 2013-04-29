@@ -60,7 +60,7 @@ if($langTag == false){
 	$langTag 	  = str_replace("-","_",$lang->getTag());
 }
 
-//problems with z-index
+//problems with z-index - may work in some situations	
 if($zindex == 1){
 	$document->addStyleDeclaration('.fb_edge_widget_with_comment{z-index:2000 !important;}');
 }
@@ -93,11 +93,11 @@ if($OGdescription):
 	$document->addCustomTag('<meta property="og:description" content="'.$OGdescription.'" />');
 endif;
 if($OGappid): 	
-	$document->addCustomTag('<meta property="fb:admins" content="'.$OGappid.'" />');
+	$document->addCustomTag('<meta property="fb:app_id" content="'.$OGappid.'" />');
 	$appid = "?appId=".$OGappid;
 endif;
 
-	$loadApiXFBML = '<div id="fb-root"></div>
+	$loadApiXFBML = '
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -105,6 +105,5 @@ endif;
   js.src = "//connect.facebook.net/'.$langTag.'/all.js#xfbml=1'.$appid.'";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, \'script\', \'facebook-jssdk\'));</script>';
-	$addScript	  = $document->addCustomTag($loadApiXFBML);
 
 require JModuleHelper::getLayoutPath('mod_facebooklike', $params->get('layout', 'default'));
