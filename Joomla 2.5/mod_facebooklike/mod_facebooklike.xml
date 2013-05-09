@@ -7,7 +7,7 @@
 	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
 	<authorEmail>martiinkolle@gmail.com</authorEmail>
 	<authorUrl>http://martiinkolle.dk</authorUrl>
-	<version>1.4.7</version>
+	<version>1.4.9</version>
 	<description>
 <![CDATA[
 Facebook like button for Joomla 2.5
@@ -81,7 +81,7 @@ Facebook like button for Joomla 2.5
 				<option value="box_count">Box_count</option>
 				<option value="button_count">Button_count</option>
 			</field>
-			<field name="colorScheme" type="list" default="0" label="MOD_FACEBOOKLIKE_COLOR_SCHEME" description="MOD_FACEBOOKLIKE_DESC_COLOR_SCHEME">
+			<field name="colorScheme" type="list" default="light" label="MOD_FACEBOOKLIKE_COLOR_SCHEME" description="MOD_FACEBOOKLIKE_DESC_COLOR_SCHEME">
 				<option value="light">MOD_FACEBOOKLIKE_LIGHT</option>
 				<option value="dark">MOD_FACEBOOKLIKE_DARK</option>
 			</field>
@@ -120,7 +120,7 @@ Facebook like button for Joomla 2.5
 			<field type="opengraph" />
 			
 			<field name="title" type="text" label="MOD_FACEBOOKLIKE_OG_TITLE" description="MOD_FACEBOOKLIKE_OG_TITLE_DESC" />
-			<field name="type" type="text" label="MOD_FACEBOOKLIKE_OG_TYPE" description="MOD_FACEBOOKLIKE_OG_TYPE_DESC" />
+			<field name="type" default="website" type="text" label="MOD_FACEBOOKLIKE_OG_TYPE" description="MOD_FACEBOOKLIKE_OG_TYPE_DESC" />
 			<field name="image" type="media" label="MOD_FACEBOOKLIKE_OG_IMAGE" description="MOD_FACEBOOKLIKE_OG_IMAGE_DESC" />
 			<field name="ogURL" type="text" label="MOD_FACEBOOKLIKE_OG_URL" description="MOD_FACEBOOKLIKE_OG_URL" />
 			<field name="sitename" type="text" label="MOD_FACEBOOKLIKE_OG_SITENAME" description="MOD_FACEBOOKLIKE_OG_SITENAME_DESC" />
