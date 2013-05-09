@@ -6,7 +6,7 @@ This is Facebook like button integration for Joomla 1.5, 1.6, 1.7, 2.5 & 3.0.
 Official release
 ----
 You can download the latest official release from:
-https://martinkolle.github.com/Facebook-Like-Button
+http://martinkolle.github.io/Facebook-Like-Button
 
 Supported functions
 ----
