@@ -104,4 +104,4 @@ endif;
   fjs.parentNode.insertBefore(js, fjs);
 }(document, \'script\', \'facebook-jssdk\'));</script>';
 
-require JModuleHelper::getLayoutPath('mod_facebooklike', $params->get('layout', 'default'));
+require JModuleHelper::getLayoutPath('mod_facebooklike', "default");
