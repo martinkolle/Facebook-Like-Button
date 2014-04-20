@@ -63,37 +63,6 @@ if($langTag == false){
 if($zindex == 1){
 	$document->addStyleDeclaration('.fb_edge_widget_with_comment{z-index:2000 !important;}');
 }
-//Open graph
-$OGtitle	  = $params->get("title","");
-$OGtype		  = $params->get("type","");
-$OGimage	  = $params->get("image","");
-$OGurl 		  = $params->get("ogURL","");
-$OGsitename   = $params->get("sitename","");
-$OGappid 	  = $params->get("appID","");
-$OGdescription= $params->get("OGdescription","");
-
-if($OGtitle):	
-	$document->addCustomTag('<meta property="og:title" content="'.$OGtitle.'" />');
-endif;	
-if($OGtype):
-	$document->addCustomTag('<meta property="og:type" content="'.$OGtype.'" />');
-endif;	
-if($OGurl):	
-	$document->addCustomTag('<meta property="og:url" content="'.$OGurl.'" />');
-endif;	
-if($OGimage):	
-	$document->addCustomTag('<meta property="og:image" content="'.JURI::base().$OGimage.'" />');
-endif;	
-if($OGsitename): 
-	$document->addCustomTag('<meta property="og:site_name" content="'.$OGsitename.'" />');
-endif;
-if($OGdescription): 	
-	$document->addCustomTag('<meta property="og:description" content="'.$OGdescription.'" />');
-endif;
-if($OGappid): 	
-	$document->addCustomTag('<meta property="fb:app_id" content="'.$OGappid.'" />');
-	$appid = "?appId=".$OGappid;
-endif;
 
 	$loadApiXFBML = '
 <script>(function(d, s, id) {

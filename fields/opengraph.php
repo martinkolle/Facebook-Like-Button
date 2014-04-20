@@ -2,7 +2,7 @@
 /**
  * Facebook Like Button for Joomla
  * @package Joomla 2.5
- * @version 1.4
+ * @version 1.5.0
  * @subpackage mod_facebooklike
  * @copyright (C) 2011 KMweb.dk and Martiinkolle.dk
  * @license http://www.gnu.org/copyleft/gpl.html GNU/GPL v.2
@@ -34,25 +34,7 @@ class JFormFieldopengraph extends JFormField
 		.plugin{font-size:14px;font-weight:bold;width:100%;padding-left:18px;}
 		');
 	$result = null;
-	$html 	= null;
-	$enabled = JPluginHelper::isEnabled('system', 'vombiefacebooklike');
-		
-		if(!$enabled):
-		//find the extention_id to the plugin
-			$db 	= JFactory::getDBO();
-			$query 	= $db->getQuery(true);
-			$query->select('extension_id');
-			$query->from('#__extensions');
-			$query->where('folder = "system" AND element = "vombiefacebooklike"');
-			$db->setQuery((string)$query);
-			$result = $db->loadResult();
-			//We are using a popup to enable the plugin.
-			JHTML::_('behavior.modal');
-
-			$html .= '<a class="x plugin modal" style="color:red;" rel="{handler:\'iframe\',size:{x:1000,y:500}}" class="modal" href="index.php?option=com_plugins&task=plugin.edit&extension_id='.$result.'">'.JText::_('MOD_FACEBOOKLIKE_ENABLE_PLUGIN').'</a>';
-		else:
-			$html .= '<span class="tick plugin" style="color:green;">'.JText::_('MOD_FACEBOOKLIKE_ENABLED').'</span>';
-		endif;
+		$html = '<p>We do not support Open Graph as of 1.5.0. Please install a plugin to change one of the following objects.</p>';
 		$html .= '<p style="width:100%" class="tip">'.JText::_('MOD_FACEBOOKLIKE_OPENGRAPH_DESC').'<img src="../modules/mod_facebooklike/fields/open_graph_help.png" class="graph_image"></p>';
 	return $html;
 	}
